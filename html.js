@@ -1,12 +1,10 @@
 var text = [
   "&lt;!<span>DOCTYPE</span> <span3>html</span3>&gt;",
-  "&lt;html&gt;",
-  "&nbsp;&lt;head&gt;",
-  "&nbsp;&lt;/head&gt;",
+  "&lt;<span>html</span>&gt;",
+  "&nbsp;&lt;<span>head</span>&gt;",
+  "&nbsp;&lt;/<span>head</span>&gt;",
   
-  "&nbsp;&lt;body&gt;",
-
-  "dasda",
+  "&nbsp;&lt;<span>body</span>&gt;",
   
   "&nbsp;&nbsp;<span>Pelo</span> <span2>visto você</span2> <span3>escaneou nosso</span3> <span>QR Code.</span>",
   "&nbsp;&nbsp;<span>Bom...</span> <span2>já que</span2> <span3>você chegou</span3> <span4>até </span4><span>aqui,</span>",
@@ -14,9 +12,9 @@ var text = [
   "",
   "&nbsp;&nbsp;<span>Se sim,</span> <span2>cique</span2> <a href=''>aqui</a><span3>, se não,</span3> <span4>apenas</span4> <span>saia da página.</span>",
   
-  "&nbsp;&lt;/body&gt;",
+  "&nbsp;&lt;/<span>body</span>&gt;",
   
-  "&lt;html&gt;",
+  "&lt;<span>html</span>&gt;",
   ""
 ];
 
@@ -37,4 +35,3 @@ for(let i = 0; i < text.length; i++) {
   table.appendChild(tr);
   
 }
-

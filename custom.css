@@ -1,4 +1,4 @@
-body{
+body {
 	font-family: 'Courier New', Courier, monospace;
 	background-color: #282A36;
   padding-top: 0;
@@ -17,7 +17,7 @@ body{
   padding-top: 0;
 }
 
-.file {
+.active {
   padding: 10px 15px 10px 15px;
   border-right: 1px #191A21 solid;
   background-color: #282A36;
@@ -29,16 +29,16 @@ body{
   border-top: #94527E 2px solid;
 }
 
-a{
+a {
 color:#8BE9FD;
 text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color:#00FF00;
 }
 
-table tr td:nth-child(2){
+table tr td:nth-child(2) {
 	color: #F8F8F2;
 }
 
@@ -46,18 +46,22 @@ span {
   color: #FF79C6;
 }
 
-span2{
+span2 {
   color: #8BE9FD;
 }
 
-span3{
+span3 {
   color: #00FF00;
 }
 
-span4{
+span4 {
   color:#F1FA8C
 }
-.active {
+
+a {
+  color:#ff0000;
+}
+.file {
   color: #6272A4;
   border-bottom: 0;
   background-color: #21222C;   
@@ -72,7 +76,7 @@ table {
     border-collapse: collapse;
 }
 
-table tr td:first-child{
+table tr td:first-child {
 	color: #6272A4;
 	border-right: solid 1px #62646C;
 	padding: 5px 15px 1px 10px;
@@ -80,14 +84,20 @@ table tr td:first-child{
 }
 
 .animacao{
-	color : #F8F8F2;
-	text-align: left;
+	color : #00ff00;
+	font-family : monospace;
+	text-align: center;
 	font-size : 25px;
-	margin: 2px 2px 20px 20px;
-	white-space: nowrap;
+	margin: 0 auto;
 	overflow: hidden;
-	border-right: 4px solid #F8F8F2;
-	animation: blinkCursor 500ms infinite normal, typing 6s steps(60) 1s normal both;
+  white-space: no-wrap;
+	border-right: 4px solid #00ff00;
+	animation: blinkCursor 500ms infinite normal, typing 2s steps(50) 1s normal both;
+}
+
+#img {
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 @keyframes typing{
@@ -95,14 +105,15 @@ table tr td:first-child{
         width: 0;
     }
     100%{
-        width: 10em;
+        width: 19em;
     }
 }
 @keyframes blinkCursor {
 	0%, 100%{
-		border-right-color: #F8F8F2;
+		border-right-color: green;
 	}
 	100%{
 		border-right-color: transparent;
 	}
-}
+
+  

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="custom.css">
+  </head>
+    
+  <body>
+    <p id='title' class='animacao'></p>
+    <script>
+
+      var texto = 'Álbum de fotos da melhor turma de TEDS';
+      var textPosition = 0;
+      var speed = 60;
+
+      typeWritter = () => {
+        document.querySelector("#title").innerHTML = texto.substring(0, textPosition);
+
+        if(textPosition++ != texto.length) {
+          setTimeout(typeWritter, speed);
+        }
+      }
+
+
+      typeWritter();
+    </script>
+
+    <div id="img" style="display:flex;"></div>
+
+    <script>
+      var div = document.getElementById("img");
+      var i = 1;
+
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
+      
+      while(i <= 9) {
+
+        var w = getRndInteger(20, 60);
+
+        console.log(w);
+        
+        img = document.createElement("img");
+        img.src = `f/a${i}.jpeg`;
+        img.style.width = `${w}%`;
+        img.style.height = `${w}%`;
+        
+        div.appendChild(img);
+        i++;
+      }
+    </script>
+      
+  </body>
+</html>

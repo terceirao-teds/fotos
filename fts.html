@@ -28,26 +28,40 @@
     <div id="img" style="display:flex;"></div>
 
     <script>
-      var div = document.getElementById("img");
-      var i = 1;
+      function shuffle(array) {
+          var i = array.length,
+              j = 0,
+              temp;
 
-      function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min) ) + min;
+          while (i--) {
+
+              j = Math.floor(Math.random() * (i+1));
+
+              // swap randomly chosen element with current element
+              temp = array[i];
+              array[i] = array[j];
+              array[j] = temp;
+
+          }
+
+          return array;
       }
       
-      while(i <= 9) {
+      var nums = shuffle(Array.from({length: 51}, (_, i) => i + 1));
+      var div = document.getElementById("img");
+      
+      for (var i = 0; i < nums.length; i++) {
 
         var w = getRndInteger(20, 60);
 
         console.log(w);
         
         img = document.createElement("img");
-        img.src = `f/a${i}.jpeg`;
+        img.src = `f/img${nums[i]}.jpeg`;
         img.style.width = `${w}%`;
         img.style.height = `${w}%`;
         
         div.appendChild(img);
-        i++;
       }
     </script>
       

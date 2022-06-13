@@ -51,16 +51,14 @@
       var div = document.getElementById("img");
       
       function getRndInteger(min, max) { 
-        Math.floor(Math.random()*(max-min+1)+min); 
+        Math.floor(Math.random()*(max - min) + min); 
       }
       
       for (var i = 0; i < nums.length; i++) {
-     
-        var w = getRndInteger(20, 40);
-
-        console.log(w);
         
         img = document.createElement("img");
+        img.src = `f/img${nums[i]}.jpeg`;
+
         if(navigator.userAgent.match(/Android/i) ||
           navigator.userAgent.match(/iPhone/i)) {
             var w = getRndInteger(20, 60);

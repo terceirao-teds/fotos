@@ -61,8 +61,14 @@
         console.log(w);
         
         img = document.createElement("img");
-        img.src = `f/img${nums[i]}.jpeg`;
-        img.style.height = "70vh";
+        if(navigator.userAgent.match(/Android/i) ||
+          navigator.userAgent.match(/iPhone/i)) {
+            var w = getRndInteger(20, 60);
+            img.style.width = `${w}%`;
+            img.style.height = `${w}%`;
+        } else {
+          img.style.height = "70vh";
+        } 
         
         div.appendChild(img);
       }
